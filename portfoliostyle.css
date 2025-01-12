@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Solway:wght@300;400;500;700;800&display=swap');
+/*
+.comfortaa-<uniquifier> {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  
+.solway-light {
+  font-family: "Solway", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.solway-regular {
+  font-family: "Solway", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.solway-medium {
+  font-family: "Solway", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.solway-bold {
+  font-family: "Solway", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.solway-extrabold {
+  font-family: "Solway", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+*/
+*{
+    box-sizing: border-box;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: space-between;
+  }
+
+
+.flex-container section {
+    flex: 1 1 calc(50% - 10px); 
+    box-sizing: border-box; 
+    padding: 10px;
+    max-width: 50%; 
+}
+
+p{
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+
+}
+
+.cycle-slideshow {
+    flex: 1 1 50%; 
+    max-width: 50%; 
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.cycle-slideshow img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* formatting the captions */
+
+.slide{
+    position: relative;
+}
+
+.slide-text{
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0 15px;
+    width: 100%;
+    font-size: .75rem;
+}
+
+.slide-text h3{
+    font-family: "Solway", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+
+/* working with the buttons */
+
+.cycle-prev, .cycle-next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.cycle-prev {
+    top: 40%;
+    left: 0;
+}
+
+.cycle-next {
+    top: 40%;
+    right: 0;
+}
+
+.cycle-slideshow:hover .cycle-prev, .cycle-slideshow:hover .cycle-next {
+    opacity: 1;
+}
+
+.cycle-pager {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    color:#999;
+    z-index: 1050;
+}
+
+.cycle-pager span{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e3e3e3;
+    margin: 5px;
+    cursor: pointer;
+    text-indent: -1999px;
+}
+
+.cycle-pager .cycle-pager-active {
+    background: #6fc1c8;
+}
+
+.slide-text p a {
+    display: inline-block;
+    text-decoration: none;
+    background: #44275E;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.slide-text p a:hover {
+    background: #246C73;
+    color: #fff;
+}
+
+
+
+/* Media Queries */
+
+/* for desktops */
+@media(max-width: 970px) {
+    .flex-container {
+        flex-direction: column; 
+    }
+
+    .flex-container section {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}

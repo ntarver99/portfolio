@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Solway:wght@300;400;500;700;800&display=swap');
+/*
+.comfortaa-<uniquifier> {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  
+.solway-light {
+  font-family: "Solway", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.solway-regular {
+  font-family: "Solway", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.solway-medium {
+  font-family: "Solway", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.solway-bold {
+  font-family: "Solway", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.solway-extrabold {
+  font-family: "Solway", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+*/
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+} 
+
+
+  header img{
+    width: 18%;
+  }
+
+header h1{
+  font-family: "Solway", serif;
+  font-weight: 700;
+  font-style: normal;
+    text-transform: uppercase;
+    color: #44275E;
+    display: inline-block;
+    padding: 5px;
+}
+
+header span{
+    display: block;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 300;
+    font-size: 0.65em;
+    letter-spacing: 3px;
+
+}
+
+nav ul{
+    list-style-type: none;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    display: flex;
+    justify-content: right;
+    letter-spacing: 2px;
+    color:#44275E;
+    text-transform: uppercase;
+}
+nav ul li{
+    margin: 10px;
+  
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #44275E;
+    padding: 10px;  
+    display: block;
+    align-items: center;
+  
+  }
+  nav ul li a:hover{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 800;
+  }  
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+ footer p{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #44275E;
+    font-size: .65em;
+ }
+
+ @media (max-width: 768px) {
+  header {
+      padding: 15px;
+      font-size: 1.2rem;
+  }
+
+   .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      font-size: 1rem;
+      padding: 10px;
+  }
+
+
+  .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 8px;
+  }
+}
